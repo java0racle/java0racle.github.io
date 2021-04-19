@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>对象身价大占卜</title>
+    <meta name="keywords" content="对象身价大占卜"/>
+    <meta name="description" content="对象身价大占卜"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+    <style type="text/css">
+        html, body{background:#f5f5f5;}
+        *{margin:0;padding:0;}
+        .g-bd{background:#f5f5f5;}
+        #message{padding:20px 0;border-radius:5px;border:solid 2px #f9d1a8;background:#f7e3ce;margin:0 15px;}
+        .tgcnt{margin:5px auto;text-align:center;font-size:1em;font-weight:bolder;}
+        h3{margin:5px auto;color:#ff6666;font-size:2em;font-weight:bolder;text-align:center;}
+        #share{margin:0 15px;padding:20px 0;}
+        .share0, .share1{height:44px;line-height:44px;border-radius:22px;color:#fff;font-size:1em;font-weight:bolder;display:inline-block;text-align:center;text-decoration:none;width:45%;margin:0 1%;padding:0;}
+        .share0{background:#ff6666;}
+        .share1{background:#39baf6;}
+        .mask{position:fixed;top:0;right:0;width:100%;height:100%;background:url('share.png') top right no-repeat rgba(0,0,0,0.7);}
+    </style>
+    <script type="text/javascript">
+        var _images = [
+            'ruhua.png',
+            'haha.png',
+            'heihei.png',
+            'fengjie.png',
+            'hehe.png'
+        ]
+        var prices = [{'0元':[['你命犯孤星，注定与左手共渡一生'],['别选了，你命犯孤星，注定与左手共渡一生']]},
+            {'5元':[['制作过程：苦瓜中心掏空，使用透明胶缠绕外围，不要问我是谁，我是红领巾'],['省着点用，黄瓜最近涨价了']]},
+            {'50元':[['骚年，够了，你500G的硬盘还无法满足你？'],['你的电池消耗量较大']]},
+            {'500元':[['记得给你女朋友按时充气'],['使用完记得用洗洗更健康……']]},
+            {'1000元':[['好高档啊，进口硅胶做的吧？'],['好高档啊，进口硅胶做的吧？']]},
+            {'2000元':[['火车站1次30，可以去166次，假如1周去1次，哇塞！你连续2年都不用换女朋友了耶！'],['你对象好可爱啊，学会握手和双脚走路了么？']]},
+            {'1W～10W':[['是越南买的吧？一年之内跑掉可以包换哟！'],['每月多发点零花钱给你对象吧，都饿得皮包骨头了……']]},
+            {'10W～50W':[['你搬砖时切记要注意安全，不然别人就会睡你老婆，打你家娃，还花你的抚恤金……'],['搬起砖，无法抱紧你，放下砖，无法养活你……']]},
+            {'50W～100W':[['加油，再奋斗5年可以贷款买房，30年后可以还清房贷，40年后帮小孩买房，画面太美，不敢想像'],['恭喜你，是一个秀外慧中的贤内助啊！外可么么哒，内可啪啪啪']]},
+            {'100W～500W':[['不过……你要担心隔壁家老王……'],['买辆车，再买套别野，小日子可以过得挺安稳了']]},
+            {'500W～1000W':[['不久你就会升职加薪、当上总经理、出任CEO走上人生巅峰'],['嫁了个村书记，走在路上都感觉自己萌萌哒']]},
+            {'1000W～5000W':[['抛弃了相恋多年的女友，和董事长200斤体重，貌似凤姐的千金喜结连理，恭喜恭喜……'],['如果不能嫁给富二代的话，感觉你的容貌，你的身材，甚至你的灵魂都被毁了……']]},
+            {'5000W～1亿':[['就差今晚双色球中奖了！'],['家里几百亩地被ZF征收，顿时家财万贯，成了暴发户']]},
+            {'1亿～5亿':[['亲，您家还缺打杂的用人么？小的会卖萌会暖床会写代码，能么么哒可啪啪啪！'],['但系统识别故障，不确定是身价，还是某液体数量……祝你好运！']]},
+            {'5亿～10亿':[['亲！还记得我吗，我就是小时候你隔壁班暗恋你多年的鼻涕陈啊，最近手头紧，借我点钱呗！'],['富婆，如果想包养小白脸，请联系我！']]},
+            {'10亿～50亿':[['所以你可千万别错过电线杆上的征婚广告'],['替我向王思聪问好']]},
+            {'50亿～100亿':[['赶紧想一下以后在迪拜的豪华游艇上，叼着纯金的雪茄，手持八星八剑南非大钻戒，嫩模环绕的情景吧'],['这么多欢乐豆，斗一辈子地主都够了']]},
+            {'0':[['菊花残，满地伤，你的笑容已泛黄','文能提笔控萝莉,武能床上定人妻。进可欺身压正太,退能提臀迎众基。','攻德无量，万受无疆','骚年，还需要肥皂吗？','互撸娃～互撸娃～一根藤上7朵花～']]}];
+    </script>
+</head>
+<body>
+    <div class="g-bd">
+        <div style="width:140px;height:140px;margin:0 auto;">
+            <img id="hehe" src="/hehe.png" alt='hehe' />
+        </div>
+        <div id="message">
+            <p class="tgcnt">你的对象身价为</p>
+            <h3 id="price0">500W~100W</h3>
+            <p id="price1" class="tgcnt"></p>
+        </div>
+        <div id="share">
+            <a class="share0" title="分享朋友圈" href="javascript:void(0);">分享朋友圈</a>
+            <a class="share1" title="重新测试" href="/index.html">重新测试</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var _weixinok = false,
+            _number = Math.random(),
+            _msg = document.getElementById('message'),
+            _hehe = document.getElementById('hehe'),
+            _share= document.getElementById('share');
+        var price0 = document.getElementById('price0'),
+            price1 = document.getElementById('price1');
+        document.addEventListener('WeixinJSBridgeReady',
+            function onBridgeReady() {
+                WeixinJSBridge.on('menu:share:timeline', function(argv){
+                    var  _content = '你的对象身价为' + price0.innerText + price1.innerText;
+                    weixin('','http://aicard.net/index.html',_content);
+                });
+                _weixinok = true;
+            }
+        )
+        var shareTimeline = function(a,b,c){
+            WeixinJSBridge.invoke('shareTimeline',{
+                "appid":'wxaa19d49513b9d755',
+                "img_url": a,
+                "link": b,
+                "desc": c,
+                "title": c
+            },function(res){
+                //
+                WeixinJSBridge.log(res.err_msg);
+            });
+        }
+        var weixin =  function (a,b,c){
+            if(_weixinok){
+                shareTimeline(a,b,c);
+            }else{
+                alert('不要急，分享内容还没准备好~');
+                return false;
+            }
+        };
+        var shareToYixin = function(_shareData){
+            var _s = [],
+                _url = "http://open.yixin.im/share?";
+            for(var i in _shareData){
+                if(_shareData.hasOwnProperty(i)){
+                    _shareData[i]!=null && _s.push(i.toString()+encodeURIComponent(_shareData[i].toString()||''))
+                }
+            }
+            location.href = _url + _s.join('&');
+        };
+        var showLayer = function(){
+            var div = document.createElement('DIV');
+            div.className = 'mask';
+            document.body.appendChild(div);
+        };
+        _share.addEventListener('touchstart',function(_event){
+            var _event = _event||window.event,
+                _target = _event.target||_event.srcElement;
+                _title = _target.title,
+                _myurl = 'http://aicard.net/index.html';
+            var  _content = '你的对象身价为' + price0.innerText + price1.innerText;
+            if (_title === '重新测试' || _target.nodeName != 'A') return;
+            showLayer();
+        },false);
+
+        var randomIndex = function(max){
+            var index = Math.ceil(Math.random() * max);
+            return index < 1 ? 1 : index;
+        }
+        var _sex = location.href.split('?')[1].split('=')[1],
+            _value = '',
+            _desc = '',
+            _list;
+        var _i = randomIndex(prices.length-1)-1;
+        if(_sex == -1){
+            _i = prices.length -1;
+            for (var key in prices[_i]){
+                _value = key;
+            }
+            _list = prices[_i][_value][0];
+            _hehe.src = _images[4];
+        }else if(_sex == 0){
+            // 男
+            for (var key in prices[_i]){
+                _value = key;
+            }
+            _list = prices[_i][_value][0];
+            _hehe.src = _images[randomIndex(3)]
+        }else{
+            // 女
+            for (var key in prices[_i]){
+                _value = key;
+            }
+            _list = prices[_i][_value][1];
+            _hehe.src = _images[randomIndex(3)]
+        }
+        _desc = _list[randomIndex(_list.length-1) - 1];
+        price0.innerText = _value;
+        price1.innerText = _desc;
+    </script>
+</body>
+</html>
